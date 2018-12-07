@@ -1,8 +1,9 @@
 node_modules/
-public/
+public/package-lock.json
 .DS_Store
 notes/
 /.vscode
+
 
 /vendor/
 
