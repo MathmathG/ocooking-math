@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ocooking</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/app.css">
+
+</head>
+<body class="home">
+    <div class="container-fluid">
+        <header class="header">
+            <div class="row">
+                <div class="logo col-2">
+                    <i class="fa fa-cutlery"></i>&nbsp;Ocooking
+                </div>
+                <div class="menu menu--text col-4">
+                    <ul class="list-inline">
+                        <li class="list-inline-item menu__item"><a href="#" class="menu__item__link">Au hazard</a></li>
+                        <li class="list-inline-item menu__item"><a href="#" class="menu__item__link">Recettes</a></li>
+                    </ul>
+                </div>
+                <div class="menu menu--icon col-4 offset-2 text-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item menu__item"><a href="#" class="menu__item__link"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item menu__item"><a href="#" class="menu__item__link"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item menu__item"><a href="#" class="menu__item__link main-menu-link"><i class="fa fa-bars"></i></a></li>
+                </div>
+            </div>
+        </header>
+
+        <div class="row main-sidebar-container">
+        <main class="main col-8 order-2">
+            <article class="recipe-highlight">
+                    <header class="row recipe-highlight__header">
+                        <div class="col-8">
+                            <h2 class="recipe-highlight__header__title">Sandwich de saison</h2>
+                            <span class="recipe-highlight__header__author">Préparée par Ettore</span>
+                        </div>
+                        <div class="col-4 recipe-highlight__header__meta">
+                            <ul>
+                                <li class="recipe-highlight__header__meta__item"><span class="recipe-highlight__header__meta__item__title">Préparation</span> 5 min.</li>
+                                <li class="recipe-highlight__header__meta__item"><span class="recipe-highlight__header__meta__item__title">Cuisson</span> 5 min.</li>
+                                <li class="recipe-highlight__header__meta__item"><span class="recipe-highlight__header__meta__item__title">Prix</span> 5 € / pers.</li>
+                            </ul>
+                        </div>
+                    </header>
+                    <main class="recipe-highlight__content">
+                        <div class="row">
+                            <figure class="recipe-highlight__content__image col-12">
+                                <img class="img-fluid" src="images/sandwich.jpg" alt="sandwich de saison">
+                            </figure>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 recipe-highlight__content__excerpt">
+                                <div class="recipe-highlight__content__excerpt__title">La recette en résumé</div>
+                                <div class="recipe-highlight__content__excerpt__content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec consectetur felis, ut eleifend ipsum. Morbi pulvinar, elit vitae venenatis lobortis, enim ex luctus purus, sit amet varius nunc arcu sed erat. Aliquam mattis egestas massa a varius.</p></div>
+                            </div>
+                            <div class="col-4 recipe-highlight__content__ingredients">
+                                <div class="recipe-highlight__content__ingredients__title">Ingrédients</div>
+                                <div class="recipe-highlight__content__ingredients__list list-inline">
+                                    <a class="badge badge-pill badge-dark" href="#">Tag label</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Salami</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Tag label</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Salami</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Tag label</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Salami</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Tag label</a>
+                                    <a class="badge badge-pill badge-dark" href="#">Salami</a>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="recipe-highlight__footer row">
+                        <div class="col-8">
+                            <a href="#" class="button button--green button--icon"><i class="fa fa-cutlery"></i> Lire la recette</a>
+                        </div>
+                        <div class="col-4">
+                            Recette visible dans <a href="" class="button">En cas</a>
+                        </div>
+                    </footer>
+                </article>
+
+        </main>
+        <aside class="sidebar col-4 order-1">
+                <h3 class="sidebar__title">oCooking</h3>
+                <p class="sidebar__tagline">Se faire plaisir tous les jours</p>
+                <p class="sidebar__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec consectetur felis, ut eleifend ipsum.</p>
+                <nav class="menu menu--uppercase">
+                    <ul>
+                        <li class="menu__item"><a href="#" class="menu__item__link">Blog</a></li>
+                        <li class="menu__item"><a href="#" class="menu__item__link">Types de recettes</a>
+                            <ul class="menu menu--lowercase menu--darker">
+                                <li class="menu__item"><a href="#" class="menu__item__link">Plats de résistance</a></li>
+                                <li class="menu__item"><a href="#" class="menu__item__link">En cas</a></li>
+                                <li class="menu__item"><a href="#" class="menu__item__link">Petit déjeuner</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="recipe-form">
+                    <div class="recipe-form__title">Proposer une recette</div>
+                    <form action="/">
+                        <fieldset>
+                            <label class="recipe-form__label" for="recipe">Recette</label>
+                            <span class="recipe-form__input-container recipe-form__input-container--recipe"><input class="recipe-form__input" id="recipe" type="text" placeholder="Recette" /></span>
+                        </fieldset>
+                        <fieldset>
+                            <label class="recipe-form__label" for="email">E-mail</label>
+                            <span class="recipe-form__input-container recipe-form__input-container--email"><input class="recipe-form__input" id="email" type="email" placeholder="Votre email" /></span>
+                        </fieldset>
+                        <fieldset>
+                            <label class="recipe-form__label" for="instructions">Instructions</label>
+                            <textarea class="recipe-form__input" id="instructions" placeholder="Instructions"></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <input id="publish_authorization" type="checkbox" />
+                            <label class="recipe-form__label recipe-form__label--inline recipe-form__label--light" for="publish_authorization">Je suis d&apos;accord pour que cette recette soit publiée sur oCooking</label>
+                        </fieldset>
+                        <fieldset>
+                            <input class="button button--green button--filled" type="submit" value="Proposer" />
+                        </fieldset>
+                    </form>
+                </div>
+            </aside>
+        </div>
+        <footer class="footer">
+			<div class="footer__text"><strong>oCooking</strong> par <a class="link link--green" href="#">oClock Team</a>. La meilleure source pour se régaler.</div>
+			<div class="logo logo--green">
+				<i class="fa fa-cutlery"></i> oCooking 2017
+			</div>
+		</footer>
+    </div>
+    <div class="main-menu main-menu--invisible">
+        <a class="action-button main-menu-link" href="#"><i class="fa fa-close"></i></a>
+        <ul>
+            <li class="main-menu__item"><a href="#" class="main-menu__item__link">Item de menu</a></li>
+            <li class="main-menu__item"><a href="#" class="main-menu__item__link">Recette</a></li>
+            <li class="main-menu__item"><a href="#" class="main-menu__item__link">Plats de resistance</a></li>
+            <li class="main-menu__item"><a href="#" class="main-menu__item__link">Desserts</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="js/vendor.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>

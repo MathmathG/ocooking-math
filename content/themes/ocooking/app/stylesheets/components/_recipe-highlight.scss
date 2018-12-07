@@ -1,0 +1,78 @@
+.recipe-highlight {
+    background-color: $color-white;
+    padding: 1.5em;
+    box-shadow: 0 0 0.5em $color-light-grey;
+
+    &__header {
+        margin-bottom: $margin-width-normal;
+
+        // shame on me
+        > div {
+            padding: 2em 1.5em;
+        }
+
+        &__title {
+            font-size: 1.5em;
+            color: $color-dark-grey;
+            margin: 0;
+        }
+
+        &__author {
+            font-size: 1em;
+            color: lighten($color-dark-grey, 10);
+        }
+
+        &__meta {
+            border-left: $border-width-small dashed $color-light-grey;
+
+            &__item {
+                color: lighten($color-dark-grey, 10);
+                font-size: 0.9em;
+
+                &__title {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    &__content {
+        &__image {
+            width: 100%;
+        }
+
+        &__excerpt {
+            &__title {
+                font: {
+                    family: $font-family-title;
+                    size: 1.5em;
+                }
+                color: $color-dark-grey;
+                margin-bottom: $margin-width-normal;
+            }
+
+            &__content {
+                p:first-child {
+                    margin-top: 0;
+                }
+
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__ingredients {
+            &__title {
+                font-family: $font-family-title;
+                margin-bottom: $margin-width-normal;
+            }
+        }
+    }
+
+    &__footer {
+        border-top: $border-width-small solid $color-bright-grey;
+        margin-top: $margin-width-normal;
+        padding: 1.5em;
+    }
+}

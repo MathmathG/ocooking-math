@@ -1,0 +1,40 @@
+.menu {
+    &__item {
+        &__link {
+            color: $color-light-grey;
+
+            &:hover {
+                color: $color-dark_grey;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &--lowercase {
+        text-transform: lowercase;
+
+        *:first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--darker {
+        .menu__item {
+            &__link {
+                color: $color-dark-grey;
+
+                &:hover {
+                    color: $color-light-grey;
+                }
+            }
+        }
+    }
+
+    .menu {
+        margin-left: $margin-width-normal;
+    }
+}

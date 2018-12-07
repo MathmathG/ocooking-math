@@ -1,0 +1,31 @@
+.main-menu {
+    background-color: $color-white;
+    bottom: 0;
+    position: fixed;
+    padding: 5rem 2.5rem;
+    right: 0;
+    top: 0;
+    width: 25%;
+
+    .action-button {
+        display: block;
+        margin-bottom: 5rem;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+
+        &__link {
+            color: $color-dark-grey;
+
+            &:hover {
+                color: darken($color-dark-grey, 20);
+                text-decoration: none;
+            }
+        }
+    }
+
+    &--invisible {
+        display: none;
+    }
+}

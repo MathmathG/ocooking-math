@@ -1,0 +1,46 @@
+.button {
+    border: {
+        width: $border-width-small;
+        style: solid;
+        color: $color-light-grey;
+        radius: 5px;
+    }
+    color: $color-dark-grey;
+    cursor: pointer;
+    padding: 0.3em 0.5em;
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--green {
+        border-color: $color-green;
+        color: $color-green;
+
+        &:hover {
+            color: $color-green;
+        }
+    }
+
+    &--icon {
+        > i {
+            margin-right: $margin-width-small;
+        }
+    }
+
+    &--filled {
+        color: $color-white;
+        background-color: $color-light-grey;
+
+        &.button--green {
+            background-color: $color-green;
+
+            &:hover {
+                background-color: darken($color-green, 10);
+                border-color: darken($color-green, 10);
+                color: $color-white;
+            }
+        }
+    }
+}

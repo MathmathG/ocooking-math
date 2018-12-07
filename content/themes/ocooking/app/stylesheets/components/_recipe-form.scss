@@ -1,0 +1,72 @@
+.recipe-form {
+    &__title {
+        color: $color-light-grey;
+        font-size: 0.9em;
+        margin-bottom: $margin-width-small;
+        text-transform: uppercase;
+    }
+
+    fieldset {
+        margin-bottom: $margin-width-small;
+    }
+
+    &__label {
+        display: block;
+        font-weight: 700;
+        margin-bottom: ($margin-width-small / 2);
+
+        &--inline {
+            display: inline;
+        }
+
+        &--light {
+            font-weight: 400;
+        }
+    }
+
+    &__input {
+        border: $border-width-small solid $color-light-grey;
+        outline: 0;
+        padding: 0.2em 0.5em;
+        width: 100%;
+    }
+
+    &__input-container {
+        display: block;
+        position: relative;
+
+        &--recipe {
+            &:after {
+                color: $color-light-grey;
+                content: '\f0f5';
+                font-family: 'FontAwesome';
+                left: 0.5em;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+
+            .recipe-form__input {
+                padding-left: 2em;
+            }
+        }
+
+        &--email {
+            &:after {
+                color: $color-light-grey;
+                content: '\f0e0';
+                font-family: 'FontAwesome';
+                left: 0.5em;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+
+            .recipe-form__input {
+                padding-left: 2em;
+            }
+        }
+    }
+}
