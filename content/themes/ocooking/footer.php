@@ -7,13 +7,17 @@
 </footer>
 </div>
 <div class="main-menu main-menu--invisible">
-<a class="action-button main-menu-link" href="#"><i class="fa fa-close"></i></a>
-<ul>
+    <a class="action-button main-menu-link" href="#"><i class="fa fa-close"></i></a>
+    <?php wp_nav_menu([
+        'theme_location'=> 'main-menu',
+        'menu_class'    => 'main-menu__item__link'
+        ])?>
+<!--<ul>
     <li class="main-menu__item"><a href="#" class="main-menu__item__link">Item de menu</a></li>
     <li class="main-menu__item"><a href="#" class="main-menu__item__link">Recette</a></li>
     <li class="main-menu__item"><a href="#" class="main-menu__item__link">Plats de resistance</a></li>
     <li class="main-menu__item"><a href="#" class="main-menu__item__link">Desserts</a></li>
-</ul>
+</ul>-->
 </div>
 <?php wp_footer(); ?>
 </body>

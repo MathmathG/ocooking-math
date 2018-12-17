@@ -1,20 +1,9 @@
 <aside class="sidebar col-4 order-1">
         <h3 class="sidebar__title"><?php bloginfo('name');?></h3>
         <p class="sidebar__tagline"><?php bloginfo('description');?></p>
-        <p class="sidebar__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec consectetur felis, ut eleifend ipsum.</p>
-        <nav class="menu menu--uppercase">
-            <ul>
-                <li class="menu__item"><a href="#" class="menu__item__link">Blog</a></li>
-                <li class="menu__item"><a href="#" class="menu__item__link">Types de recettes</a>
-                    <ul class="menu menu--lowercase menu--darker">
-                        <li class="menu__item"><a href="#" class="menu__item__link">Plats de résistance</a></li>
-                        <li class="menu__item"><a href="#" class="menu__item__link">En cas</a></li>
-                        <li class="menu__item"><a href="#" class="menu__item__link">Petit déjeuner</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="recipe-form">
+        <p class="sidebar__description"></p>
+
+        <!--<div class="recipe-form">
             <div class="recipe-form__title">Proposer une recette</div>
             <form action="/">
                 <fieldset>
@@ -37,5 +26,6 @@
                     <input class="button button--green button--filled" type="submit" value="Proposer" />
                 </fieldset>
             </form>
-        </div>
+        </div>-->
+        <?php echo do_shortcode('[contact-form-7 id="14" title="Formulaire de contact 1"]') ?>
     </aside>

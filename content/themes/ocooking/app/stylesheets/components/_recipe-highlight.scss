@@ -63,6 +63,7 @@
         }
 
         &__ingredients {
+          margin-bottom: $margin-width-normal;
             &__title {
                 font-family: $font-family-title;
                 margin-bottom: $margin-width-normal;
@@ -72,7 +73,7 @@
 
     &__footer {
         border-top: $border-width-small solid $color-bright-grey;
-        margin-top: $margin-width-normal;
+        margin-top: 1em;
         padding: 1.5em;
     }
 }

@@ -1,6 +1,8 @@
 .recipe-excerpt {
     background-color: $color-white;
     box-shadow: 0 0 0.5em $color-light-grey;
+    margin: 0.5em;
+
 
     &__image {
         margin: 0;
@@ -13,11 +15,7 @@
     }
 
     &__content {
-        border: {
-            color: $color-light-grey;
-            style: solid;
-            width: 0 $border-width-small 0;
-        }
+
         padding: 1em 1em 0;
 
         &__title {
@@ -29,18 +27,14 @@
         }
 
         &__excerpt {
-            border-bottom: $border-width-small solid $color-light-grey;
+
             margin-bottom: 0;
             padding-bottom: $margin-width-normal;
         }
     }
 
     &__footer {
-        border: {
-            color: $color-light-grey;
-            style: solid;
-            width: 0 $border-width-small $border-width-small;
-        }
+
         padding: 1em;
     }
 }

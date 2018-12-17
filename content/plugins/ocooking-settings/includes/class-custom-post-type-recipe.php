@@ -1,54 +1,60 @@
 <?php
-
-if (! class_exists('Custom_Post_Type_Recipe')){
-	class Custom_Post_Type_Recipe{
-        const RECIPE_POST_TYPE = 'recipe';
+if ( ! class_exists( 'Custom_Post_Type_Recipe' ) ) {
+	class Custom_Post_Type_Recipe {
+		const RECIPE_POST_TYPE    = 'recipe';
 		const INGREDIENT_TAXONOMY = 'ingredient';
-        const TYPE_TAXONOMY       = 'type';
-
+		const TYPE_TAXONOMY       = 'type';
 		public function __construct() {
-			add_action('init', [$this, 'init_post_type']);
-			add_action('init', [$this, 'init_taxonomies']);
+			add_action( 'init', [ $this, 'init_post_type' ] );
+			add_action( 'init', [ $this, 'init_taxonomies' ] );
+
 		}
-		public function init_post_type(){
+		public function init_post_type() {
 			$recipe_post_type_labels = array(
-			'name'               => 'Recettes',
-			'singular_name'      => 'Recette',
-			'add_new'            => 'Ajouter',
-			'add_new_item'       => 'Ajouter une nouvelle recette',
-			'edit_item'          => 'Éditer une recette',
-			'new_item'           => 'Nouvelle recette',
-			'view_item'          => 'Voir la recette',
-			'search_items'       => 'Rechercher des recettes',
-			'not_found'          => 'Aucune recette trouvé',
-			'not_found_in_trash' => 'Aucune recette trouvé dans la corbeille',
-			'menu_name'          => 'Recettes',
+				'name'               => 'Recettes',
+				'singular_name'      => 'Recette',
+				'add_new'            => 'Ajouter',
+				'add_new_item'       => 'Ajouter une nouvelle recette',
+				'edit_item'          => 'Éditer une recette',
+				'new_item'           => 'Nouvelle recette',
+				'view_item'          => 'Voir la recette',
+				'search_items'       => 'Rechercher des recettes',
+				'not_found'          => 'Aucune recette trouvé',
+				'not_found_in_trash' => 'Aucune recette trouvé dans la corbeille',
+				'menu_name'          => 'Recettes',
 			);
-
 			$recipe_post_type_args = [
-      'labels'        => $recipe_post_type_labels,
-			'description'   => 'Recette de cuisine',
-			'public'        => true,
-            'menu_icon'     => 'dashicons-carrot',
-            'supports'      => [
-                'title',
-                'editor',
-                'thumbnail',
-                'custom-fields',
-                'excerpt',
-            ],
-		'hierarchical'    => false,
-        'public'          =>true,
-        'has archive'     =>true,
-        'menue_position'  =>4,
-        'menu_icon'       =>'dashicons-carrot'
-
-        ];
-        register_post_type(self::RECIPE_POST_TYPE, $recipe_post_type_args);
-
+				'labels'        => $recipe_post_type_labels,
+				'description'   => 'Recette de cuisine',
+				'supports'      => [
+					'title',
+					'editor',
+                    'author',
+					'thumbnail',
+					'custom-fields',
+					'excerpt',
+					'page-attributes',
+				],
+				'hierarchical'  => false,
+				'public'        => true,
+				'has_archive'   => true,
+				'menu_position' => 4,
+				'menu_icon'     => 'dashicons-carrot',
+				'show_in_rest'  => true,
+				'rest_base'     => self::RECIPE_POST_TYPE . 's',
+			];
+			register_post_type(
+				self::RECIPE_POST_TYPE,
+				$recipe_post_type_args
+			);
 		}
-        public function init_taxonomies(){
-            $ingredient_taxonomy_labels = [
+
+
+
+
+
+		public function init_taxonomies() {
+			$ingredient_taxonomy_labels = [
 				'name'                       => 'Ingrédients',
 				'singular_name'              => 'Ingrédient',
 				'menu_name'                  => 'Ingrédients',
@@ -67,7 +73,7 @@ if (! class_exists('Custom_Post_Type_Recipe')){
 				'items_list'                 => 'Lister les ingrédients',
 				'items_list_navigation'      => 'Lister les ingrédients',
 			];
-            $ingredient_taxonomy_args = [
+			$ingredient_taxonomy_args = [
 				'labels'        => $ingredient_taxonomy_labels,
 				'hierarchical'  => false,
 				'public'        => true,
@@ -75,12 +81,12 @@ if (! class_exists('Custom_Post_Type_Recipe')){
 				'show_in_rest'  => true,
 				'rest_base'     => self::INGREDIENT_TAXONOMY . 's',
 			];
-            register_taxonomy(
+			register_taxonomy(
 				self::INGREDIENT_TAXONOMY,
 				self::RECIPE_POST_TYPE,
 				$ingredient_taxonomy_args
 			);
-            $type_taxonomy_labels = [
+			$type_taxonomy_labels = [
 				'name'                       => 'Types',
 				'singular_name'              => 'Type',
 				'menu_name'                  => 'Types',
@@ -99,21 +105,20 @@ if (! class_exists('Custom_Post_Type_Recipe')){
 				'items_list'                 => 'Lister les types',
 				'items_list_navigation'      => 'Lister les types',
 			];
-            $type_taxonomy_args = [
+			$type_taxonomy_args = [
 				'labels'       => $type_taxonomy_labels,
 				'hierarchical' => true,
 				'public'       => true,
 				'show_in_rest' => true,
 				'rest_base'    => self::RECIPE_POST_TYPE . '_' . self::TYPE_TAXONOMY . 's',
 			];
-            register_taxonomy(
+			register_taxonomy(
 				self::TYPE_TAXONOMY,
 				self::RECIPE_POST_TYPE,
 				$type_taxonomy_args
 			);
-
-        }
-        public function activation() {
+		}
+		public function activation() {
 			$this->init_post_type();
 			$this->init_taxonomies();
 			flush_rewrite_rules();
