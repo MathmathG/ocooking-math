@@ -1,5 +1,5 @@
 node_modules/
-public/package-lock.json
+public-encrypt/package-lock.json
 .DS_Store
 notes/
 /.vscode
